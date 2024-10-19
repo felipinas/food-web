@@ -1,0 +1,7 @@
+pre-commit:
+  commands:
+    check:
+      glob: "*.{js,ts,jsx,tsx}"
+      run: eslint --fix {staged_files} && prettier --write {staged_files}
+    update-index:
+      run: git update-index --again
